@@ -1,7 +1,7 @@
 services:
   qbittorrent:
     container_name: qbittorrent
-    image: linuxserver/qbittorrent-nox:latest
+    image: linuxserver/qbittorrent:latest
     networks:
       - qbit-network
       - proxy-network
