@@ -1,6 +1,6 @@
 #!/bin/bash
 echo "Creating networks..."
-docker create network qbit-network && docker create network jellyfin-network && docker create network proxy-network
+docker network create qbit-network && docker network create jellyfin-network && docker network create proxy-network
 echo "Starting containers...:"
 cd ./proxy && docker compose up -d
 cd ../
