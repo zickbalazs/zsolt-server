@@ -4,8 +4,8 @@ services:
     image: qbittorrentofficial/qbittorrent-nox:latest
     tty: true
     networks:
-      - qbit
-      - proxy
+      - qbit-network
+      - proxy-network
     volumes:
       - ./.config:/config
       - /mnt/seagate-alpha/torrents:/downloads/seagate-alpha

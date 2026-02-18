@@ -17,8 +17,8 @@ services:
     environment:
       - JELLYFIN_PublishedServerUrl=https://tv.zsginal.hu
     networks:
-      - jellyfin
-      - proxy
+      - jellyfin-network
+      - proxy-network
 networks:
   jellyfin-network:
     external: true
