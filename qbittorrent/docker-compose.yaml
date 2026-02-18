@@ -5,6 +5,9 @@ services:
     networks:
       - qbit-network
       - proxy-network
+    environment:
+      - PUID=1000
+      - PGID=1000
     volumes:
       - ./.config:/config
       - /mnt/seagate-alpha/torrents:/downloads/seagate-alpha
