@@ -1,0 +1,17 @@
+services:
+  qbittorrent:
+    container_name: qbittorrent
+    image: qbittorrentofficial/qbittorrent-nox:latest
+    tty: true
+    networks:
+      - qbit
+      - proxy
+    volumes:
+      - ./.config:/config
+      - /mnt/seagate-alpha/torrents:/downloads/seagate-alpha
+      - /mnt/seagate-beta/torrents:/downloads/seagate-beta
+networks:
+  qbit-network:
+    external: true
+  proxy-network:
+    external: true
